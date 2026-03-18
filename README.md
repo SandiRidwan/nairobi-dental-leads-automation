@@ -1,28 +1,52 @@
-# Google Maps Lead Scraper: Nairobi Dental Clinics
+# 🏥 Google Maps Lead Scraper: Nairobi Dental Clinics
+**High-Precision B2B Extraction & Automated Lead Enrichment**
 
-A high-performance Python automation tool designed to extract and clean B2B leads from Google Maps. 
+![Python](https://img.shields.io/badge/Python-3.10+-blue.svg?style=for-the-badge&logo=python)
+![Selenium](https://img.shields.io/badge/Automation-Selenium-red.svg?style=for-the-badge&logo=selenium)
+![Market](https://img.shields.io/badge/Market-Nairobi_Kenya-green.svg?style=for-the-badge)
+![Data](https://img.shields.io/badge/Clean-UTF--8_Safe-brightgreen.svg?style=for-the-badge)
 
-## Features
-- **Deep Grid Search**: Scans 26+ sub-districts to bypass Google Maps search limits.
-- **Automated Cleaning**: Professional post-processing to remove UTF-8 artifacts (like location icons) and standardize text formatting.
-- **WhatsApp Integration**: Automatically generates direct WhatsApp API links for lead outreach.
-- **Deduplication**: Ensures data uniqueness based on phone number verification.
+---
 
-## Tech Stack
-- **Python 3.x**
-- **Selenium**: Browser automation.
-- **Pandas**: Data engineering and Excel export.
-- **Regex**: Advanced text cleaning and symbol removal.
+## 📌 Project Overview
+This specialized automation tool is engineered to penetrate the healthcare market in **Nairobi, Kenya**. It doesn't just scrape data; it performs a **Deep Grid Search** across 26+ sub-districts (Westlands, Kilimani, Karen, etc.) to bypass Google Maps' visibility limits, ensuring 100% market coverage.
 
-## How to Use
-1. Install dependencies: `pip install -r requirements.txt`
-2. Run the scraper: `python src/scraper.py`
-3. Run the cleaner: `python src/cleaner.py`
+---
 
-## Sample Output
-The tool generates a structured Excel file including:
-- Clinic Name
-- Verified Phone Number
-- WhatsApp Direct Link
-- Physical Address
-- Website URL
+## ⚡ The Extraction Engine
+
+### 🛰️ Deep Grid Search Logic
+Google Maps typically limits search results to ~200 entries. This bot executes a recursive sub-district scan to ensure no dental clinic is missed, regardless of its ranking.
+
+### 🧹 Advanced Text Sanitization (The Cleaner)
+Built-in **Regex-powered engines** to scrub raw data:
+* Removes messy UTF-8 artifacts (Location pins 📍, Phone icons 📞).
+* Standardizes address formats.
+* Validates Kenyan phone numbers (+254).
+
+### 💬 WhatsApp Outreach Integration
+Automatically generates **Direct WhatsApp API Links** for every lead, allowing sales teams to initiate contact with one click.
+
+---
+
+## 🛠️ Tech Stack & Architecture
+
+| Component | Technology | Role |
+| :--- | :--- | :--- |
+| **Automation** | Selenium WebDriver | Browser interaction & data harvesting |
+| **Engineering** | Pandas | Data cleaning & Excel orchestration |
+| **Sanitization** | Regex (re) | UTF-8 artifact removal & text formatting |
+| **Validation** | Deduplication Logic | Phone-based uniqueness verification |
+
+---
+
+## 📂 Project Structure
+
+```text
+├── src/
+│   ├── scraper.py         # The Harvester: Scans G-Maps Grid
+│   └── cleaner.py         # The Polisher: Symbol removal & WA links
+├── data/
+│   └── nairobi_dentists.xlsx  # Final clean output
+├── requirements.txt
+└── README.md
